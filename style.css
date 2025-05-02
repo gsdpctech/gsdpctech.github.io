@@ -1,62 +1,197 @@
+/* ===== Base & Reset ===== */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --light-bg: #f9f9f9;
+  --dark-bg: #2c3e50;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Arial', sans-serif;
+  --spacing-unit: 1rem;
+  --border-radius: 4px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  padding: 0 var(--spacing-unit);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+/* ===== Typography ===== */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-unit);
 }
 
-nav {
-    margin: 20px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 
+.subtitle {
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-bottom: var(--spacing-unit);
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: var(--spacing-unit);
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* ===== Navigation ===== */
+nav {
+  background-color: var(--dark-bg);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-unit);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ===== Main Content ===== */
+main {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: var(--spacing-unit);
+}
+
+/* ===== Projects Section ===== */
+.project-list {
+  list-style-type: none;
+}
+
+.project-list li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius);
+}
+
+.project-link {
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Resume Section ===== */
+.resume-link {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.resume-link:hover {
+  background-color: var(--primary-color);
+}
+
+/* ===== Contact Section ===== */
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-method {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  min-width: 80px;
+}
+
+.contact-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--dark-bg);
+  color: white;
+  border-radius: var(--border-radius);
 }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 0.5rem 0;
+  }
+
+  main {
+    padding: 1rem;
+  }
 }
