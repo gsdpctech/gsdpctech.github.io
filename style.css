@@ -1,5 +1,6 @@
 /* ===== Base & Reset ===== */
 :root {
+  --background-color: green;
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
   --accent-color: #e74c3c;
